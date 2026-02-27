@@ -245,45 +245,43 @@ header {
     align-items: center;
   }
 
+  .sidebar {
+    width: 100%;
+  }
+
   .sidebar ul {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 24px;
     padding-bottom: 10px;
+    padding-left: 4px;
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;       
+    -ms-overflow-style: none;   
   }
 
-  .sidebar li:hover {
-    transform: none;
+  .sidebar ul::-webkit-scrollbar {
+    display: none;              
   }
 
   .sidebar li {
     flex: 0 0 auto;
   }
 
+  .sidebar li:hover {
+    transform: none;
+  }
+
   .sidebar li::before {
     display: none;
   }
 
-.sidebar li {
-  position: relative;
-  padding-left: 30px;
-}
-
-.sidebar li::before {
-  content: ">";
-  position: absolute;
-  left: 0;
-  opacity: 0;
-}
-
-.sidebar li.active::before {
-  opacity: 1;
-}
-
   .sidebar-profile {
     display: none;
   }
+
 }
 
 .contact-links {
@@ -452,3 +450,4 @@ header {
   padding-left: 18px;
   margin: 0;
 }
+
