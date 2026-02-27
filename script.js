@@ -390,9 +390,6 @@ contact: `
    </div>
 
 </a>
-
-  </a>
-
 </div>
 `
 };
@@ -510,3 +507,4 @@ function animateParticles() {
 }
 
 animateParticles();
+
