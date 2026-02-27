@@ -8,6 +8,15 @@ h1, h2, h3 {
   line-height: 1.8;
 }
 
+.cv-skill-card strong,
+.portfolio-main strong,
+.contact-text strong,
+.cv-button {
+  line-height: 1.8;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 600px) {
   h1 {
     line-height: 1.9;
@@ -238,7 +247,7 @@ header {
   transform: translateY(0);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
 
   .wrapper {
     flex-direction: column;
@@ -255,15 +264,13 @@ header {
     overflow-x: auto;
     gap: 24px;
     padding-bottom: 10px;
-    padding-left: 4px;
-    scroll-behavior: smooth;
 
-    scrollbar-width: none;       
-    -ms-overflow-style: none;   
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
   .sidebar ul::-webkit-scrollbar {
-    display: none;              
+    display: none;
   }
 
   .sidebar li {
@@ -280,6 +287,16 @@ header {
 
   .sidebar-profile {
     display: none;
+  }
+
+  .portfolio-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .portfolio-action {
+    align-self: flex-end;
   }
 
 }
@@ -373,24 +390,6 @@ header {
   transform: translateX(4px);
 }
 
-.portfolio-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-
-  padding: 22px 26px;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-
-  text-decoration: none;
-  color: inherit;
-
-  transition:
-    transform 0.15s ease,
-    background 0.3s ease;
-}
-
 .portfolio-main {
   flex: 1;
   min-width: 0;
@@ -406,15 +405,6 @@ header {
 .portfolio-main span {
   font-size: 0.85rem;
   opacity: 0.7;
-}
-
-.portfolio-action {
-  display: inline-flex;          
-  align-items: center;           
-  gap: 6px;
-  font-size: 0.75rem;
-  opacity: 0.6;
-  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .pixel-arrow {
@@ -441,7 +431,7 @@ header {
 .cv-skill-card strong {
   font-family: 'Press Start 2P', monospace;
   font-size: 11px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   letter-spacing: 1px;
   opacity: 0.85;
 }
@@ -450,4 +440,3 @@ header {
   padding-left: 18px;
   margin: 0;
 }
-
