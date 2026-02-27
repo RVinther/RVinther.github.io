@@ -260,21 +260,15 @@ header {
 
   .sidebar ul {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 24px;
-    padding-bottom: 10px;
-
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .sidebar ul::-webkit-scrollbar {
-    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px 24px;
+    padding: 0px;
   }
 
   .sidebar li {
-    flex: 0 0 auto;
+    font-size: clamp(10px, 3vw, 14px);
+    margin: 0;
   }
 
   .sidebar li:hover {
@@ -458,4 +452,5 @@ header {
   padding-left: 18px;
   margin: 0;
 }
+
 
