@@ -256,6 +256,8 @@ header {
 
   .sidebar {
     width: 100%;
+    min-width: 0;
+    text-align: center;
   }
 
   .sidebar ul {
@@ -452,5 +454,6 @@ header {
   padding-left: 18px;
   margin: 0;
 }
+
 
 
