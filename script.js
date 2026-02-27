@@ -353,7 +353,6 @@ contact: `
        <strong>GitHub</strong>
        <span>github.com/RVinther</span>
      </div>
-
   </a>
 
   <a href="https://www.linkedin.com/in/mathias-vinther-ravnholt-nielsen-01048612a/"
@@ -374,6 +373,7 @@ contact: `
        <strong>LinkedIn</strong>
        <span>linkedin.com/in/mathias-vinther</span>
      </div>
+  </a>
 
   <a href="mailto:eliseborgvej@gmail.dk"
    class="contact-card">
@@ -419,18 +419,6 @@ menuItems.forEach(item => {
     menuItems.forEach(i => i.classList.remove("active"));
     item.classList.add("active");
 
-    activeMenuItem = item;
-
-    setContent(lockedSection);
-  });
-});
-
-menuItems.forEach(item => {
-  item.addEventListener("click", () => {
-    lockedSection = item.dataset.section;
-
-    menuItems.forEach(i => i.classList.remove("active"));
-    item.classList.add("active");
     activeMenuItem = item;
 
     setContent(lockedSection);
