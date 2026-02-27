@@ -506,5 +506,6 @@ function animateParticles() {
   requestAnimationFrame(animateParticles);
 }
 
-animateParticles();
-
+window.addEventListener("load", () => {
+  animateParticles();
+});
