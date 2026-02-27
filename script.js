@@ -495,7 +495,7 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
-let particles = Array.from({ length: 35 }, () => ({
+let particles = Array.from({ length: 20 }, () => ({
   x: Math.random() * canvas.width,
   y: Math.random() * canvas.height,
   size: 2,
