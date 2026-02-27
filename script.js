@@ -469,8 +469,6 @@ function animateColor() {
 
 animateColor();
 
-animateColor();
-
 window.addEventListener("load", () => {
 
   const canvas = document.getElementById("particles");
@@ -512,3 +510,4 @@ window.addEventListener("load", () => {
 
   animateParticles();
 });
+
