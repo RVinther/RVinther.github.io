@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+h1, h2, h3 {
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    line-height: 1.9;
+  }
+
+  h2 {
+    line-height: 1.9;
+  }
+
+  h3 {
+    line-height: 1.8;
+  }
+}
+
 html {
   scrollbar-gutter: stable;
 }
@@ -150,7 +168,6 @@ header {
   font-size: clamp(14px, 2vw, 18px);
   margin-top: 0;
   margin-bottom: 32px;
-  line-height: 1.8;
   letter-spacing: 1px;
   opacity: 0.95;
 }
@@ -210,21 +227,6 @@ header {
   opacity: 0.85;
 }
 
-.cv-section h3 {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 13px;
-  margin-bottom: 18px;
-  margin-top: 40px;
-  letter-spacing: 1px;
-  opacity: 0.85;
-}
-
-.cv-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-}
-
 .fade-section {
   opacity: 0;
   transform: translateY(15px);
@@ -245,14 +247,39 @@ header {
 
   .sidebar ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 24px;
+    padding-bottom: 10px;
+  }
+
+  .sidebar li:hover {
+    transform: none;
+  }
+
+  .sidebar li {
+    flex: 0 0 auto;
   }
 
   .sidebar li::before {
     display: none;
   }
+
+.sidebar li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.sidebar li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+
+.sidebar li.active::before {
+  opacity: 1;
+}
 
   .sidebar-profile {
     display: none;
@@ -315,21 +342,6 @@ header {
   margin-top: 30px;
 }
 
-.portfolio-card {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  padding: 22px 26px;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-  text-decoration: none;
-  color: inherit;
-  transition:
-    transform 0.15s ease,
-    background 0.3s ease,
-    border-color 0.3s ease;
-}
-
 .portfolio-card:hover {
   transform: translateY(-4px);
   background: rgba(255,255,255,0.04);
@@ -358,13 +370,6 @@ header {
   opacity: 0.7;
 }
 
-.portfolio-action {
-  margin-top: 12px;
-  font-size: 0.75rem;
-  opacity: 0.6;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
 .portfolio-card:hover .portfolio-action {
   opacity: 1;
   transform: translateX(4px);
@@ -375,6 +380,17 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+
+  padding: 22px 26px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+
+  text-decoration: none;
+  color: inherit;
+
+  transition:
+    transform 0.15s ease,
+    background 0.3s ease;
 }
 
 .portfolio-main {
@@ -400,18 +416,12 @@ header {
   gap: 6px;
   font-size: 0.75rem;
   opacity: 0.6;
-  white-space: nowrap;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .pixel-arrow {
   font-family: 'Press Start 2P', monospace;
   line-height: 1;               
-}
-
-.portfolio-card:hover .portfolio-action {
-  opacity: 1;
-  transform: translateX(4px);
 }
 
 .cv-grid {
