@@ -70,8 +70,8 @@ about: `
 <h2>Om mig</h2>
 
 <p>
-  Familiefar til to og vinder af Vestfynsrækken 2025
-  med Brylle oldboys’ fodboldhold.
+  Stort familiemenneske og vinder af Vestfynsrækken 2025
+  med Brylles oldboys-fodboldhold. Bor i Odense C med min forlovede og vores to små piger.
 </p>
 
 <p>
@@ -510,4 +510,5 @@ window.addEventListener("load", () => {
 
   animateParticles();
 });
+
 
